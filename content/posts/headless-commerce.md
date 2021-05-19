@@ -6,7 +6,6 @@ date: '2021-05-18T14:15:12'
 tags:
   - Shopify
   - GatsbyJS
-  - ecomloop
 featuredImage: '../images/NShore.jpg'
 excerpt: >-
   this theme is now available on github for free. it's a shopify + gatsby starter theme for digital commerce

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import Image from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import StoreContext from '../context/StoreContext'
 
@@ -11,35 +11,32 @@ const ProductGrid = () => {
     store: { checkout },
   } = useContext(StoreContext)
   const { allShopifyProduct } = useStaticQuery(
-    graphql`
-      query allProductsQuery {
-        allShopifyProduct(sort: { fields: [createdAt], order: DESC }) {
-          edges {
-            node {
-              id
-              title
-              handle
-              createdAt
-              description
-              images {
-                id
-                originalSrc
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 910) {
-                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    }
-                  }
-                }
-              }
-              variants {
-                price
-              }
+    graphql`query allProductsQuery {
+  allShopifyProduct(sort: {fields: [createdAt], order: DESC}) {
+    edges {
+      node {
+        id
+        title
+        handle
+        createdAt
+        description
+        images {
+          id
+          originalSrc
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 910, placeholder: TRACED_SVG, layout: CONSTRAINED)
             }
           }
         }
+        variants {
+          price
+        }
       }
-    `
+    }
+  }
+}
+`
   )
 
   const getPrice = price =>
@@ -66,11 +63,10 @@ const ProductGrid = () => {
             <div className="PostCard Product" key={id}>
               <Link to={`/product/${handle}/`}>
                 {firstImage && firstImage.localFile && (
-                  <Image
-                    fluid={firstImage.localFile.childImageSharp.fluid}
+                  <GatsbyImage
+                    image={firstImage.localFile.childImageSharp.gatsbyImageData}
                     alt={handle}
-                    className="PostCard--Image"
-                  />
+                    className="PostCard--Image" />
                 )}
               </Link>
               <div className="PostCard--Content">
@@ -95,7 +91,7 @@ const ProductGrid = () => {
         <p>No Products found!</p>
       )}
     </div>
-  )
+  );
 }
 
 export default ProductGrid

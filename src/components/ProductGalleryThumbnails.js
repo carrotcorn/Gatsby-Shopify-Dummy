@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Image from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import './ProductGalleryThumbnails.css'
 
 const ProductGalleryThumbnails = ({ productimages }) => {
@@ -7,15 +7,18 @@ const ProductGalleryThumbnails = ({ productimages }) => {
 
   return (
     <>
-      {productimages && productimages[currentImageIndex] && (
-        <Image
-          fluid={
-            productimages[currentImageIndex].localFile.childImageSharp.fluid
-          }
-          key={productimages[currentImageIndex].id}
-          className="Gallery--FeaturedImage"
-        />
-      )}
+      <div className="imgContainer">
+        {productimages && productimages[currentImageIndex] && (
+          <GatsbyImage
+            image={
+              productimages[currentImageIndex].localFile.childImageSharp
+                .gatsbyImageData
+            }
+            key={productimages[currentImageIndex].id}
+            className="Gallery--FeaturedImage"
+          />
+        )}
+      </div>
 
       <div className="table">
         <div className="row">
@@ -29,13 +32,12 @@ const ProductGalleryThumbnails = ({ productimages }) => {
                 role="menuitem"
                 tabIndex={0}
               >
-                <Image
-                  fluid={image.localFile.childImageSharp.fluid}
+                <GatsbyImage
+                  image={image.localFile.childImageSharp.gatsbyImageData}
                   key={image.id}
                   className="cell"
                   imgStyle={{
-                    objectFit: 'contain',
-                    height: '50px'
+                    objectFit: 'contain'
                   }}
                 />
               </span>

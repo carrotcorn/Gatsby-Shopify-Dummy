@@ -69,70 +69,66 @@ const ProductPage = ({ data }) => {
 
 export default ProductPage
 
-export const pageQuery = graphql`
-  query($handle: String!) {
-    shopifyProduct(handle: { eq: $handle }) {
+export const pageQuery = graphql`query ($handle: String!) {
+  shopifyProduct(handle: {eq: $handle}) {
+    id
+    title
+    handle
+    productType
+    description
+    descriptionHtml
+    shopifyId
+    options {
+      id
+      name
+      values
+    }
+    variants {
       id
       title
-      handle
-      productType
-      description
-      descriptionHtml
+      price
+      availableForSale
+      compareAtPrice
       shopifyId
-      options {
-        id
+      selectedOptions {
         name
-        values
-      }
-      variants {
-        id
-        title
-        price
-        availableForSale
-        compareAtPrice
-        shopifyId
-        selectedOptions {
-          name
-          value
-        }
-      }
-      priceRange {
-        minVariantPrice {
-          amount
-          currencyCode
-        }
-        maxVariantPrice {
-          amount
-          currencyCode
-        }
-      }
-      images {
-        originalSrc
-        id
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 910) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+        value
       }
     }
-
-    allServices: allShopifyProduct(sort: { fields: publishedAt, order: DESC }) {
-      edges {
-        node {
-          id
-        }
-        next {
-          title
-          handle
-        }
-        previous {
-          title
-          handle
+    priceRange {
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+      maxVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    images {
+      originalSrc
+      id
+      localFile {
+        childImageSharp {
+          gatsbyImageData(width: 910, placeholder: TRACED_SVG, layout: CONSTRAINED)
         }
       }
     }
   }
+  allServices: allShopifyProduct(sort: {fields: publishedAt, order: DESC}) {
+    edges {
+      node {
+        id
+      }
+      next {
+        title
+        handle
+      }
+      previous {
+        title
+        handle
+      }
+    }
+  }
+}
 `

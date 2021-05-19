@@ -2,16 +2,15 @@
 template: ContactPage
 slug: contact
 title: Get in Touch
-featuredImage: '../images/ecomloop_ecommerce_development_header_wall_shadow.png'
-subtitle: Have an interesting project? Let's talk!
+featuredImage: '../../static/images/NShore.jpg'
+subtitle: 
 address: |-
-  329 Primrose Ave #117181
-  Burlingame, California 94010
-phone: 508-332-4418
+  Richmond, British Columbia, Canada
+phone: 604-970-8142
 email: eric@sonarmusic.social
 locations:
-  - lat: '37.5780511'
-    lng: '-122.3510674'
+  - lat: '49.16632022555409'
+    lng: '-123.17424911011875'
     mapLink: ''
 meta:
   description: >-

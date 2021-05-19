@@ -10,8 +10,8 @@ if (process.env.GATSBY_NETLIFY_MAP_KEY) {
 class GoogleMap extends Component {
   static defaultProps = {
     center: {
-      lat: 37.5780511,
-      lng: -122.3510674,
+      lat: 49.16632022555409,
+      lng: -123.17424911011875,
     },
     zoom: 10,
   }
@@ -19,13 +19,20 @@ class GoogleMap extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '50vh', width: '100%' }}>
+      <div style={{ 
+      height: '30vh', 
+      width: '100%', 
+      display: 'block',
+      // marginRight: 'auto',
+      // marginLeft: 'auto'
+      
+    }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: mapkey }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <Marker lat={37.5780511} lng={-122.3510674} text={'here we are!'} />
+          <Marker lat={49.16632022555409} lng={-123.17424911011875} text={'here we are!'} />
         </GoogleMapReact>
       </div>
     )

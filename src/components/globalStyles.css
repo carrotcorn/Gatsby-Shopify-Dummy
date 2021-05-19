@@ -1,8 +1,8 @@
 :root {
-  --primary: #09BC8A;
+  --primary: #09bc8a;
   --secondary: #004346;
   --lightGrey: whitesmoke;
-  --midGrey: #09BC8A;
+  --midGrey: #09bc8a;
   --darkGrey: #004346;
   --danger: #ff3d3d;
   --font-primary: 'DM Mono', monospace;
@@ -27,7 +27,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Jost:ital,wght@0,300;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 html {
   box-sizing: border-box;
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-font-family: 'DM Mono', monospace;
+  font-family: 'Raleway', sans-serif;
   min-height: 100%;
   position: relative;
   background: white;
@@ -47,7 +47,6 @@ font-family: 'DM Mono', monospace;
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-
 }
 
 a {
@@ -63,19 +62,19 @@ p {
   margin-bottom: 1em;
 }
 
-h1, h2
-{
+h1,
+h2 {
   margin: 0;
   margin-bottom: 0.5em;
-font-family: 'Jost', sans-serif;
-font-wegiht:700;
+  font-family: 'Jost', sans-serif;
+  font-wegiht: 700;
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Raleway', sans-serif;
 }
 
 pre {

@@ -10,7 +10,7 @@ const PageHeader = ({
   subtitle,
   backgroundImage,
   large,
-  className = '',
+  className = ''
 }) => {
   if (large) className += ' PageHeader-large'
   return (
@@ -19,7 +19,7 @@ const PageHeader = ({
         <Image
           background
           resolutions="large"
-          src={backgroundImage}
+          src="../../static/images/NShore.jpg"
           alt={title}
           size="cover"
         />
@@ -36,7 +36,7 @@ const PageHeader = ({
 
 PageHeader.propTypes = {
   title: PropTypes.string,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.string
 }
 
 export default PageHeader

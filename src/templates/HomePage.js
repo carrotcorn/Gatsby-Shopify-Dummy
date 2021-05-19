@@ -27,10 +27,10 @@ export const convertProductsToPostFormat = (products) => {
 export const HomePageTemplate = ({
   title,
   subtitle,
-  // featuredImage,
-  // body,
-  // accordion,
-  // posts,
+  featuredImage,
+  body,
+  accordion,
+  posts,
   products
 }) => (
   <main className="Home">
@@ -38,7 +38,7 @@ export const HomePageTemplate = ({
       large
       title={title}
       subtitle={subtitle}
-      backgroundImage="../../static/images/NShore.jpg"
+      backgroundImage={featuredImage}
     />
 
     {!!products.length && convertProductsToPostFormat(products) && (

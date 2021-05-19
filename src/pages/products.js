@@ -6,9 +6,9 @@ import ProductGrid from '../components/ProductGrid'
 const ServicesPage = () => (
   <Layout>
     <PageHeader
-      title="shop the demo store"
-      subtitle="check out the aweswome products"
-      backgroundImage="../images/headless_hero.jpg"
+      title="your local bike shop online!"
+      subtitle="See our latest featured products"
+      backgroundImage="../images/Nshore.jpg"
     />
     <section className="section">
       <div className="container">

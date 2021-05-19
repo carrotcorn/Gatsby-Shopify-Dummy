@@ -9,6 +9,7 @@ IF EXIST "%dp0%\node.exe" (
   SET PATHEXT=%PATHEXT:;.JS;=;%
 )
 
+
 "%_prog%"  "%dp0%\node_modules\rimraf\bin.js" %*
 ENDLOCAL
 EXIT /b %errorlevel%

@@ -44,12 +44,6 @@ export const HomePageTemplate = ({
       backgroundImage={featuredImage}
     />
 
-    {/* <section className="section">
-      <div className="container">
-        <Content source={body} />
-      </div>
-    </section> */}
-
     {!!products.length && convertProductsToPostFormat(products) && (
       <section className="section">
         <div className="container">
@@ -61,20 +55,6 @@ export const HomePageTemplate = ({
       </section>
     )}
 
-    {/* <section className="section">
-      <div className="container">
-        <PostSection title="features" />
-        <Accordion title="features" items={accordion} />
-      </div>
-    </section>
-
-    {!!posts.length && (
-      <section className="section">
-        <div className="container">
-          <PostSection title="Recent Blog Posts" posts={posts} />
-        </div>
-      </section>
-    )} */}
   </main>
 )
 

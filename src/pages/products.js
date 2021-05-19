@@ -8,7 +8,7 @@ const ServicesPage = () => (
     <PageHeader
       title="your local bike shop online!"
       subtitle="See our latest featured products"
-      backgroundImage="../images/Nshore.jpg"
+      backgroundImage="../../static/images/NShore.jpg"
     />
     <section className="section">
       <div className="container">

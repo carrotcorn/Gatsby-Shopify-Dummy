@@ -6,12 +6,12 @@ export default () => (
     <footer className="footer">
       <div className="container taCenter">
         <span>
-          ⚒ by{' '}
+          by{' '}
           <a href="https://ecomloop.com" target="_blank" rel="noopener noreferrer">
-            ecomloop
+            Eric Bourne
           </a>{' '}
-          in 🥑 california
-          <br />© Copyright {new Date().getFullYear()} All rights reserved.
+    
+          <br />© Copyright {new Date().getFullYear()}
         </span>
       </div>
     </footer>

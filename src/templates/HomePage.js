@@ -3,27 +3,24 @@ import { graphql } from 'gatsby'
 import _ from 'lodash'
 import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
-// import Content from '../components/Content'
 import Layout from '../components/Layout'
-// import Accordion from '../components/Accordion'
 
-export const convertProductsToPostFormat = products => {
+export const convertProductsToPostFormat = (products) => {
   let formattedProducts = []
-  products.forEach(service => {
+  products.forEach((service) => {
     let singleItem = {
       title: service.title,
       excerpt: _.truncate(service.description, {
         length: 140,
-        omission: `…`,
+        omission: `…`
       }),
       featuredImage: service.images[0].originalSrc,
-      slug: '/product/' + service.handle,
+      slug: '/product/' + service.handle
     }
     formattedProducts.push(singleItem)
   })
 
-  return formattedProducts;
-
+  return formattedProducts
 }
 
 // Export Template for use in CMS preview
@@ -34,7 +31,7 @@ export const HomePageTemplate = ({
   body,
   accordion,
   posts,
-  products,
+  products
 }) => (
   <main className="Home">
     <PageHeader
@@ -54,7 +51,6 @@ export const HomePageTemplate = ({
         </div>
       </section>
     )}
-
   </main>
 )
 
@@ -65,13 +61,13 @@ const HomePage = ({ data: { page, posts, products, projects } }) => (
       {...page}
       {...page.frontmatter}
       body={page.html}
-      posts={posts.edges.map(post => ({
+      posts={posts.edges.map((post) => ({
         ...post.node,
         ...post.node.frontmatter,
-        ...post.node.fields,
+        ...post.node.fields
       }))}
-      products={products.edges.map(service => ({
-        ...service.node,
+      products={products.edges.map((service) => ({
+        ...service.node
       }))}
     />
   </Layout>

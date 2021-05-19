@@ -3,7 +3,6 @@ import { graphql, Link } from 'gatsby'
 
 import { ChevronLeft } from 'react-feather'
 
-
 import Layout from '../components/Layout'
 import ProductForm from '../components/ProductForm'
 import ProductGalleryThumbnails from '../components/ProductGalleryThumbnails'
@@ -13,7 +12,7 @@ import './ProductPage.css'
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
   const thisEdge = data.allServices.edges.find(
-    edge => edge.node.id === product.id
+    (edge) => edge.node.id === product.id
   )
 
   return (
@@ -24,7 +23,7 @@ const ProductPage = ({ data }) => {
         itemType="http://schema.org/BlogPosting"
       >
         <div className="container skinny">
-          <Link className="SingleService--BackButton" to="/solutions/">
+          <Link className="SingleService--BackButton" to="/services/">
             <ChevronLeft /> BACK
           </Link>
           <div className="SingleService--Content relative">
@@ -49,7 +48,7 @@ const ProductPage = ({ data }) => {
                   className="SingleService--Pagination--Link prev"
                   to={`/service/${thisEdge.previous.handle}`}
                 >
-                  Previous Service
+                  Previous Item
                 </Link>
               )}
               {thisEdge && thisEdge.next && thisEdge.next.handle && (
@@ -57,7 +56,7 @@ const ProductPage = ({ data }) => {
                   className="SingleService--Pagination--Link next"
                   to={`/solution/${thisEdge.next.handle}`}
                 >
-                  Next Service
+                  Next Item
                 </Link>
               )}
             </div>

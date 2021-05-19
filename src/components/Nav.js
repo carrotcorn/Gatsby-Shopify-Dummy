@@ -68,7 +68,7 @@ export class Navigation extends Component {
                 role="menuitem"
                 tabIndex={0}
               >
-                Blog
+                Menu
                 <div className="Nav--GroupLinks">
                   <NavLink to="/blog/" className="Nav--GroupLink">
                     All Posts
@@ -88,17 +88,8 @@ export class Navigation extends Component {
             }
             <NavLink to="/products/">Shop</NavLink>
 
-            <NavLink to="/blog/">Blog</NavLink>
+            <NavLink to="/blog/">About</NavLink>
 
-            <a
-              href="https://github.com/ecomloop/headless/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Find on GitHub"
-              class="Nav--CTA"
-            >
-              download on github
-            </a>
           </div>
           <button
             className="Nav--MenuButton"

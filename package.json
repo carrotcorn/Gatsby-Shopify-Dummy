@@ -1,12 +1,13 @@
 {
-  "name": "headless",
-  "HomePage": "https://headless.us",
-  "description": "the shopify + gatsby starter theme for digital commerce",
-  "version": "0.4.5",
+  "name": "Gatsby-Shopify-Dummy",
+  "HomePage": "https://www.eric-bourne.com",
+  "description": "Gatsby Shopify Dummy Commerce Site",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ecomloop/headless"
+    "url": "https://github.com/carrotcorn/Gatsby-Shopify-Dummy"
   },
+  
   "dependencies": {
     "@fs/gatsby-plugin-drive": "^0.2.1",
     "@reach/router": "^1.3.4",

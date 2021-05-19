@@ -24,9 +24,9 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
+      result.errors.forEach((e) => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
 
@@ -35,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
     const contentTypes = _.groupBy(mdFiles, 'node.fields.contentType')
 
     _.each(contentTypes, (pages, contentType) => {
-      const pagesToCreate = pages.filter(page =>
+      const pagesToCreate = pages.filter((page) =>
         // get pages with template field
         _.get(page, `node.frontmatter.template`)
       )
@@ -53,8 +53,8 @@ exports.createPages = ({ actions, graphql }) => {
           ),
           // additional data can be passed via context
           context: {
-            id,
-          },
+            id
+          }
         })
       })
     })
@@ -70,7 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       result.data.allShopifyProduct.edges.forEach(({ node }) => {
         createPage({
           path: `/product/${node.handle}/`,
@@ -78,8 +78,8 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
-            handle: node.handle,
-          },
+            handle: node.handle
+          }
         })
       })
     })
@@ -120,14 +120,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: slug
     })
 
     // Add contentType to node.fields
     createNodeField({
       node,
       name: 'contentType',
-      value: parsedFilePath.dir,
+      value: parsedFilePath.dir
     })
   }
 }

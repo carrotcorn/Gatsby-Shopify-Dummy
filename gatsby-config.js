@@ -196,7 +196,7 @@ module.exports = {
         // Setting a color is optional.
         color: 'white',
         // Disable the loading spinner.
-        showSpinner: false
+        showSpinner: true
       }
     },
     'gatsby-plugin-sitemap',

@@ -38,7 +38,7 @@ export const HomePageTemplate = ({
       large
       title={title}
       subtitle={subtitle}
-      backgroundImage={featuredImage}
+      backgroundImage="../../static/images/NShore.jpg"
     />
 
     {!!products.length && convertProductsToPostFormat(products) && (

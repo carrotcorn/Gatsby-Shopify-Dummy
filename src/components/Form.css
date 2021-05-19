@@ -12,6 +12,7 @@
 }
 
 .Form--Group {
+  font-family: 'Raleway', sans-serif;
   position: relative;
   display: flex;
   flex-direction: row;

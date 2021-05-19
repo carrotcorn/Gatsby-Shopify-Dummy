@@ -8,8 +8,8 @@ subtitle: >-
 
 accordion:
   - content: >-
-      Just because I don't have a brick and mortar location doesn't mean I'm not a local. I have been mountain biking the North Shore mountains for over 20 years and the sport has become too expensive! I am here to provide essential equipment for BC residents because we are a different breed of mountain biker; we destroy almost everything we use way too fast, and stores have been taking advantage of that for years. My goal is to make mountain biking accessible to everyone regardless of income.
-    title: I am your local bike shop for the 21st century
+      Sea To Sky Cycles is the bike shop of the 21st century. Just because I don't have a brick and mortar location doesn't mean I'm not a local. I have been mountain biking the North Shore mountains for over 20 years and the sport I love most has become too expensive! I am here to provide essential equipment for BC residents because we are a different breed of mountain biker; we destroy almost everything we use way too fast, and stores have been taking advantage of that for years. My goal is to make mountain biking accessible to everyone regardless of income.
+    title: Lowest Prices in canada!
   - content: >-
       Having worked in a bike shop in the heart of the North Shore, I know first hand that the overwhelming majority of profit made is from bike sales alone. Small items and clothing are an after thought for bike shops. When selling these items that are necessary to ride, but don't pay the bills, only one options comes to mind, egregious prices. Its not fair to spend a fortune on a bike and still have to pay another small fortune for everything needed to ride.
     title: The markup on equipment reflects needless profit

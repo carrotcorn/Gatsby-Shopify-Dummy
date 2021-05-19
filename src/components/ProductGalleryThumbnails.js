@@ -35,6 +35,7 @@ const ProductGalleryThumbnails = ({ productimages }) => {
                   className="cell"
                   imgStyle={{
                     objectFit: 'contain',
+                    height: '50px'
                   }}
                 />
               </span>

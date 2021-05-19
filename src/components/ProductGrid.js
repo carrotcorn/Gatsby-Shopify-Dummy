@@ -20,6 +20,7 @@ const ProductGrid = () => {
               title
               handle
               createdAt
+              description
               images {
                 id
                 originalSrc
@@ -57,6 +58,7 @@ const ProductGrid = () => {
               id,
               handle,
               title,
+              description,
               images: [firstImage],
               variants: [firstVariant],
             },
@@ -82,7 +84,7 @@ const ProductGrid = () => {
                     style={{ width: '%' }}
                     className="Nav--CTA"
                   >
-                    Learn More
+                    See more
                   </Link>
                 </div>
               </div>

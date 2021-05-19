@@ -3,9 +3,9 @@ import { graphql } from 'gatsby'
 import _ from 'lodash'
 import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
-import Content from '../components/Content'
+// import Content from '../components/Content'
 import Layout from '../components/Layout'
-import Accordion from '../components/Accordion'
+// import Accordion from '../components/Accordion'
 
 export const convertProductsToPostFormat = products => {
   let formattedProducts = []
@@ -44,24 +44,24 @@ export const HomePageTemplate = ({
       backgroundImage={featuredImage}
     />
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <Content source={body} />
       </div>
-    </section>
+    </section> */}
 
     {!!products.length && convertProductsToPostFormat(products) && (
       <section className="section">
         <div className="container">
           <PostSection
-            title="demo shop"
+            title="Featured Items"
             posts={convertProductsToPostFormat(products)}
           />
         </div>
       </section>
     )}
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <PostSection title="features" />
         <Accordion title="features" items={accordion} />
@@ -74,7 +74,7 @@ export const HomePageTemplate = ({
           <PostSection title="Recent Blog Posts" posts={posts} />
         </div>
       </section>
-    )}
+    )} */}
   </main>
 )
 

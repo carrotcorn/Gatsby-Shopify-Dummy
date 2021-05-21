@@ -59,13 +59,13 @@ export const HomePageTemplate = ({
         </div>
       </section>
     )}
-
+{/* 
     <section className="section">
       <div className="container">
         <PostSection title="Why Shop Here?" />
         <Accordion title="features" items={accordion} />
       </div>
-    </section>
+    </section> */}
 
     {!!posts.length && (
       <section className="section">

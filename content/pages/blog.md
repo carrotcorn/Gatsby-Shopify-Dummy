@@ -1,11 +1,11 @@
 ---
 template: BlogIndex
 slug: blog
-title: blog
+title: XXX blog
 featuredImage: ''
-subtitle: Dazzling posts about innovative Shopify+GatsbyJS stores
+subtitle: XXXXXX Gatsby Shopify dummy site
 meta:
   description: >-
-    publish fancy posts about your shopify store here
+    XXXXXXXXX publish fancy posts about your shopify store here
   title: blog 
 ---

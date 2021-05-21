@@ -22,7 +22,7 @@ export const SinglePostTemplate = ({
     : '../' + featuredImage
   return (
     <main>
-      <PageHeader backgroundImage={pageFeaturedImage} />
+      {/* <PageHeader backgroundImage={pageFeaturedImage} /> */}
       <article
         className="SinglePost section light"
         itemScope

@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: your local bike shop online!
-featuredImage: '../../static/images/NShore.jpg'
+featuredImage: './images/NShore.jpg'
 subtitle: >-
   ## Everything needed for the North Shore and more...
 
@@ -21,6 +21,6 @@ accordion:
     title:
 meta:
   description: >-
-   the shopify + gatsby starter theme for digital commerce
+    the shopify + gatsby starter theme for digital commerce
   title: Sea To Sky Cycles
 ---

@@ -3,5 +3,5 @@ template: FormPage
 slug: test
 title: test
 subtitle: test
-featuredImage: '../images/NShore.png'
+featuredImage: './images/NShore.jpg'
 ---

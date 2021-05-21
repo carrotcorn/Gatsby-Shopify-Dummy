@@ -19,7 +19,7 @@ const PageHeader = ({
         <Image
           background
           resolutions="large"
-          src="../../static/images/NShore.jpg"
+          src={backgroundImage}
           alt={title}
           size="cover"
         />

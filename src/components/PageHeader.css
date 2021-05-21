@@ -1,5 +1,5 @@
 .PageHeader {
-  background-color: var(--darkGrey);
+  background-image: url("../../static/images/NShore.jpg");
   color: white;
   padding: 15rem 0;
 }

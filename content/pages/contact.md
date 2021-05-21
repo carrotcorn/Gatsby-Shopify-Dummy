@@ -2,8 +2,8 @@
 template: ContactPage
 slug: contact
 title: Get in Touch
-featuredImage: '../../static/images/NShore.jpg'
-subtitle: 
+featuredImage: './images/NShore.jpg'
+subtitle:
 address: |-
   Richmond, British Columbia, Canada
 phone: 604-970-8142
@@ -17,4 +17,3 @@ meta:
     Like the Site? Get in contact!
   title: Contact Page
 ---
-

@@ -10,7 +10,7 @@ export class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false,
-    currentPath: false,
+    currentPath: false
   }
 
   componentDidMount = () =>
@@ -21,9 +21,9 @@ export class Navigation extends Component {
   // Only close nav if it is open
   handleLinkClick = () => this.state.active && this.handleMenuToggle()
 
-  toggleSubNav = subNav =>
+  toggleSubNav = (subNav) =>
     this.setState({
-      activeSubNav: this.state.activeSubNav === subNav ? false : subNav,
+      activeSubNav: this.state.activeSubNav === subNav ? false : subNav
     })
 
   render() {
@@ -50,46 +50,46 @@ export class Navigation extends Component {
           </Link>
           <div className="Nav--Links">
             {
-            <div
-              className={`Nav--Group ${
-                this.state.activeSubNav === 'posts' ? 'active' : ''
-              }`}
-            >
-              <span
-                className={`NavLink Nav--GroupParent ${
-                  this.props.location.pathname.includes('posts') ||
-                  this.props.location.pathname.includes('blog') ||
-                  this.props.location.pathname.includes('post-categories')
-                    ? 'active'
-                    : ''
+              <div
+                className={`Nav--Group ${
+                  this.state.activeSubNav === 'posts' ? 'active' : ''
                 }`}
-                onClick={() => this.toggleSubNav('posts')}
-                onKeyDown={() => this.toggleSubNav('posts')}
-                role="menuitem"
-                tabIndex={0}
               >
-                Menu
-                <div className="Nav--GroupLinks">
-                  <NavLink to="/blog/" className="Nav--GroupLink">
-                    All Posts
-                  </NavLink>
-                  {subNav.posts.map((link, index) => (
-                    <NavLink
-                      to={link.slug}
-                      key={'posts-subnav-link-' + index}
-                      className="Nav--GroupLink"
-                    >
-                      {link.title}
+                <span
+                  className={`NavLink Nav--GroupParent ${
+                    this.props.location.pathname.includes('posts') ||
+                    this.props.location.pathname.includes('blog') ||
+                    this.props.location.pathname.includes('post-categories')
+                      ? 'active'
+                      : ''
+                  }`}
+                  onClick={() => this.toggleSubNav('posts')}
+                  onKeyDown={() => this.toggleSubNav('posts')}
+                  role="menuitem"
+                  tabIndex={0}
+                >
+                  Menu
+                  <div className="Nav--GroupLinks">
+                    <NavLink to="/blog/" className="Nav--GroupLink">
+                      All Posts
                     </NavLink>
-                  ))}
-                </div>
-              </span>
-            </div>
+                    {subNav.posts.map((link, index) => (
+                      <NavLink
+                        to={link.slug}
+                        key={'posts-subnav-link-' + index}
+                        className="Nav--GroupLink"
+                      >
+                        {link.title}
+                      </NavLink>
+                    ))}
+                  </div>
+                </span>
+              </div>
             }
             <NavLink to="/products/">Shop</NavLink>
             <NavLink to="/blog/">About</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
-
+            {/* <NavLink to="/login/">Login</NavLink> */}
           </div>
           <button
             className="Nav--MenuButton"
@@ -105,5 +105,5 @@ export class Navigation extends Component {
 }
 
 export default ({ subNav }) => (
-  <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
+  <Location>{(route) => <Navigation subNav={subNav} {...route} />}</Location>
 )
